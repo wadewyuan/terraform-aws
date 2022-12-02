@@ -3,3 +3,9 @@ variable "instance_name" {
   type        = string
   default     = "ExampleAppServerInstance"
 }
+
+variable "region" {
+  description = "AWS Region"
+  type        = string
+  default     = "us-west-2"
+}

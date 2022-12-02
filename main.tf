@@ -11,13 +11,13 @@ terraform {
   backend "s3" {
     bucket         = "terraform-wy"
     key            = "learn-terraform"
-    region         = "us-west-2"
+    region         = var.region
     dynamodb_table = "dynamodb-state-locking"
   }
 }
 
 provider "aws" {
-  region = "us-west-2"
+  region = var.region
 }
 
 resource "aws_instance" "app_server" {
