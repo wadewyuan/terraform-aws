@@ -33,6 +33,10 @@ jobs:
           role-duration-seconds: 900
           aws-region: us-west-2
       
+        # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
+      - name: Terraform Init
+        run: terraform init
+      
       # Checks that all Terraform configuration files adhere to a canonical format
       - name: Terraform Destroy
         run: terraform destroy -auto-approve -input=false
