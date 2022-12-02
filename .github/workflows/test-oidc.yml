@@ -1,3 +1,5 @@
+on: push
+
 name: test-oidc
 permissions:
   id-token: write # required to use OIDC authentication
@@ -8,9 +10,9 @@ jobs:
     steps:
     - name: configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
-        with:
-          role-to-assume: arn:aws:iam::184083701473:role/github-oidc
-          role-duration-seconds: 600
-          aws-region: us-west-2
+      with:
+        role-to-assume: arn:aws:iam::184083701473:role/github-oidc
+        role-duration-seconds: 600
+        aws-region: us-west-2
     - name: Test AWS Creds
       run: aws sts get-caller-identity
