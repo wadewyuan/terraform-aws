@@ -12,7 +12,7 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v1
       with:
         role-to-assume: arn:aws:iam::184083701473:role/github-oidc
-        role-duration-seconds: 600
+        role-duration-seconds: 900
         aws-region: us-west-2
     - name: Test AWS Creds
       run: aws sts get-caller-identity
