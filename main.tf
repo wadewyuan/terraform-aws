@@ -11,7 +11,7 @@ terraform {
   backend "s3" {
     bucket         = "terraform-wy"
     key            = "learn-terraform"
-    region         = var.region
+    region         = "us-west-2"
     dynamodb_table = "dynamodb-state-locking"
   }
 }
