@@ -21,6 +21,6 @@ jobs:
     - name: Show ConfigMap
       uses: actions-hub/kubectl@master
       env:
-        KUBE_CONFIG: $(cat $HOME/.kube/config | base64)
+        KUBE_CONFIG: $(cat /home/runner/.kube/config | base64)
       with:
         args: get pods
