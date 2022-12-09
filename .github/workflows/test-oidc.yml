@@ -17,7 +17,7 @@ jobs:
     - name: Test AWS Creds
       run: aws sts get-caller-identity
     - name: Setup Kubectl
-      run: aws eks --region us-west-2 update-kubeconfig --name education-eks-Elywdlnl --profile default 
+      run: aws eks --region us-west-2 update-kubeconfig --name education-eks-Elywdlnl
     - name: Show ConfigMap
       uses: actions-hub/kubectl@master
       env:
